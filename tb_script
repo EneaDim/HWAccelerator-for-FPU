@@ -1,0 +1,26 @@
+ghdl -a -fsynopsys ./vhdl/unpackfp_unpackfp.vhd
+ghdl -a -fsynopsys ./vhdl/packfp_packfp.vhd
+ghdl -a -fsynopsys ./vhdl/data_maker.vhd
+ghdl -a -fsynopsys ./vhdl/adder_NBIT.vhd
+ghdl -a -fsynopsys ./vhdl/booth_encoder.vhd
+ghdl -a -fsynopsys ./vhdl/FF.vhd
+ghdl -a -fsynopsys ./vhdl/HA.vhd
+ghdl -a -fsynopsys ./vhdl/FA.vhd
+ghdl -a -fsynopsys ./vhdl/MUX2TO1.vhd
+ghdl -a -fsynopsys ./vhdl/mux_4_to_1.vhd
+ghdl -a -fsynopsys ./vhdl/register_nbit.vhd
+ghdl -a -fsynopsys ./vhdl/y_block.vhd
+ghdl -a -fsynopsys ./vhdl/z_block.vhd
+ghdl -a -fsynopsys ./vhdl/DaddaTree.vhd
+ghdl -a -fsynopsys ./vhdl/MBE.vhd
+ghdl -a -fsynopsys ./vhdl/fpnormalize_fpnormalize.vhd
+ghdl -a -fsynopsys ./vhdl/fpround_fpround.vhd
+ghdl -a -fsynopsys ./vhdl/fpmul_stage1_struct.vhd
+ghdl -a -fsynopsys ./vhdl/fpmul_stage2_struct.vhd
+ghdl -a -fsynopsys ./vhdl/fpmul_stage3_struct.vhd
+ghdl -a -fsynopsys ./vhdl/fpmul_stage4_struct.vhd
+ghdl -a -fsynopsys ./vhdl/fpmul_pipeline.vhd 
+ghdl -a -fsynopsys ./tb/tb_mul.vhd
+ghdl -e -fsynopsys tb_mul
+ghdl -r -fsynopsys tb_mul --vcd=./tb/tb_mul.vcd
+

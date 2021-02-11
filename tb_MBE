@@ -1,0 +1,15 @@
+ghdl -a -fsynopsys ./vhdl/adder_NBIT.vhd
+ghdl -a -fsynopsys ./vhdl/booth_encoder.vhd
+ghdl -a -fsynopsys ./vhdl/FF.vhd
+ghdl -a -fsynopsys ./vhdl/HA.vhd
+ghdl -a -fsynopsys ./vhdl/FA.vhd
+ghdl -a -fsynopsys ./vhdl/MUX2TO1.vhd
+ghdl -a -fsynopsys ./vhdl/mux_4_to_1.vhd
+ghdl -a -fsynopsys ./vhdl/register_nbit.vhd
+ghdl -a -fsynopsys ./vhdl/y_block.vhd
+ghdl -a -fsynopsys ./vhdl/z_block.vhd
+ghdl -a -fsynopsys ./vhdl/DaddaTree.vhd
+ghdl -a -fsynopsys ./vhdl/MBE.vhd
+ghdl -a -fsynopsys ./tb/tb_MBE.vhd
+ghdl -e -fsynopsys tb_MBE
+ghdl -r -fsynopsys tb_MBE --vcd=./tb/tb_MBE.vcd
