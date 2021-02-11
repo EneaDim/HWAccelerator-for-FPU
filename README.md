@@ -1,4 +1,4 @@
-# Hardware Accelerator for FPU
+# Hardware Accelerator for FPU Multiplier
 ![FPU image](https://github.com/EneaDim/HWAccelerator-for-FPU/blob/main/images/FPU.png)
 
 - The hardware accelerator is made for the <b>Multiply Significand</b> block.
