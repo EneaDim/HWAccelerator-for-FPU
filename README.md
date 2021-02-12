@@ -7,7 +7,7 @@ The <b>Modified Booth Encoding</b> technique is implemented, which allow to conv
 
 This encoding is performed in order to get all the partial products of the multiplication.
 
-Given all the partial products, the way in which they are added toghether is using <b>Dadda Adder Plane</b>.
+Given all the partial products, the way in which they are added toghether is using a <b>Dadda Adder Plane</b>.
 
 This implementation uses <b>full adders</b> and <b>half adders</b> in a <b>Carry Save Adder </b> configuration to add all the partial products together.
 
@@ -41,17 +41,27 @@ Walkthrough <https://github.com/YosysHQ/nextpnr>
 
 ### Simulation
 
-The 'tb_mul.vhd' is the default testbench.
+The 'tb_mul.vhd' is the default testbench for the overall architecture.
 
 The simulation can be seen running ```gtkwave tb/tb_mul.vcd```.
 
+There is also the 'tb_MBE.vhd' testbench, which involves only the Multiply Significand Block.
+
+This other simulation can be seen running ```gtkwave tb/tb_MBE.vcd```
+
 ### Compile the design
 
-Running ```tb_script``` file , all files will be analyzed using ```ghdl```.
+Running ```tb_script``` file , files of the overall architecture will be analyzed using ```ghdl```.
 
 By default a <b>vcd</b> file named 'tb_mul.vcd will be created in the ```tb/``` directory.
 
 You can see the simulation running again ```gtkwave tb/tb_mul.vcd```.
+
+The ```tb_MBE``` file compiles the design of the Hardware Accelerator, the Multiply Significand Block.
+
+Also in this case a <b>vcd</b> file is created in the ```tb/``` directory, named 'tb_MBE.vcd'.
+
+You can see the simulation running again ```gtkwave tb/tb_MBE.vcd```.
 
 ### Synthesys
 
