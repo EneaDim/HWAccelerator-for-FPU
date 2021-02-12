@@ -53,7 +53,7 @@ This other simulation can be seen running ```gtkwave tb/tb_MBE.vcd```
 
 Running ```tb_script``` file , files of the overall architecture will be analyzed using ```ghdl```.
 
-By default a <b>vcd</b> file named 'tb_mul.vcd will be created in the ```tb/``` directory.
+By default a <b>vcd</b> file named 'tb_mul.vcd' will be created in the ```tb/``` directory.
 
 You can see the simulation running again ```gtkwave tb/tb_mul.vcd```.
 
@@ -67,7 +67,7 @@ You can see the simulation running again ```gtkwave tb/tb_MBE.vcd```.
 
 The vhdl code are converted in verilog files with ```vhd2vl```.
 
-The DaddaTree.vhd file can't be converted in verilog using 'vhd2vl' because of memory exhausted problem. 
+The DaddaTree.vhd file can't be converted in verilog using ```vhd2vl``` because of memory exhausted problem. 
 
 If you can convert it, all verilog files the synthesys can be done with ```yosys```.
 
