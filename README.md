@@ -1,13 +1,29 @@
 # Hardware Accelerator for FPU Multiplier
 ![FPU image](https://github.com/EneaDim/HWAccelerator-for-FPU/blob/main/images/FPU.png)
 
+The idea is to speed up the <b>Floating Point Multiplier</b> by means of redesigning the <b>Multiply Significand</b> block.
+
+The <b>Modified Booth Encoding</b> technique is implemented, which allow to convert signed numbers into 2's complement, so the multiplication can be performed faster.
+
+This encoding is performed in order to get all the partial products of the multiplication.
+
+Given all the partial products, the way in which they are added toghether is using <b>Dadda Adder Plane</b>.
+
+This implementation uses <b>full adders</b> and <b>half adders</b> in a <b>Carry Save Adder </b> configuration to add all the partial products together.
+
+To design this particular hardware configuration, a <b>Python</b> script is used to write the <b>VHDL</b> code of the block.
+
+The 2 outputs of <b>DaddaTree</b> are added using a simple <b>Ripple Carry Adder</b>.
+
+## Hardware Design
+
 - The hardware accelerator is made for the <b>Multiply Significand</b> block.
 
-- Operands are encoded with a <b>Modified Booth Encoder</b> technique.
+- <b>Modified Booth Encoder</b> .
 
-- Partial products are added together with a <b>Dadda Adder Plane</b>.
+- <b>Dadda Adder Plane</b>.
 
-- The Dadda Plane vhdl code is made through Python codes that generate the vhdl code of the Block.
+- <b>Simple 2-input Adder</b>.
 
 ### Requirements to Compile and Simulate
 
