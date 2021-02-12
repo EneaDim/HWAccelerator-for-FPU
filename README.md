@@ -9,27 +9,47 @@
 
 - The Dadda Plane vhdl code is made through Python codes that generate the vhdl code of the Block.
 
-## Simulation
-Running 'tb\_script' , all files will be analyzed using <b>GHDL</b>.
+### Requirements to Compile and Simulate
 
-The 'tb\_mul.vhd' is the testbench of the simulation.
+```sudo apt-get install ghdl gtkwave```
 
-The output of the simulation is the tb\_mul.vcd file.
+### Requirements to Synthetize
 
-This simulation can be seen using <b>GTKWAVE</b>.
+Walkthrough <https://github.com/YosysHQ/yosys>
 
-## Synthesys
-The vhdl code are converted in verilog files with <b>VHD2VL</b>.
+Walkthrough to convert vhdl into verilog files <https://github.com/ldoolitt/vhd2vl> (needed for synthesys with yosys)
+
+### Requirements to Place&Route
+
+Walkthrough <https://github.com/YosysHQ/nextpnr>
+
+### Simulation
+
+The 'tb_mul.vhd' is the default testbench.
+
+The simulation can be seen running ```gtkwave tb/tb_mul.vcd```.
+
+### Compile the design
+
+Running ```tb_script``` file , all files will be analyzed using ```ghdl```.
+
+By default a <b>vcd</b> file named 'tb_mul.vcd will be created in the ```tb/``` directory.
+
+You can see the simulation running again ```gtkwave tb/tb_mul.vcd```.
+
+### Synthesys
+
+The vhdl code are converted in verilog files with ```vhd2vl```.
 
 The DaddaTree.vhd file can't be converted in verilog using 'vhd2vl' because of memory exhausted problem. 
 
-If you can convert it, all verilog files the synthesys can be done with <b>YOSYS</b>.
+If you can convert it, all verilog files the synthesys can be done with ```yosys```.
 
-The target FPGA platform can be choosed with <b>YOSYS</b> with the commmand: 'synth\_<target_name>'.
+The target FPGA platform can be choosed with ```yosys``` with the commmand: ```synth_<target_name>```.
 
 ## Place & Route 
 Has to be done.
 
-Using <b>NEXTPNR</b>
+Using ```nextpnr```.
 
 
